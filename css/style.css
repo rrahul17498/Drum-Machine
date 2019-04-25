@@ -1,0 +1,183 @@
+body {
+  background-color: black;
+  font-size: 100%;
+}
+
+.outer-board {
+  margin-top: 4em;
+  background-color: #0e1111;
+}
+
+/* Control Panel design*/
+
+#control-board {
+  min-height: 11em;
+  height: auto;
+  text-align: center;
+  background-color: #8a2c20;
+  border-radius: 5px;
+}
+
+/* Control Panel - Button */
+
+#button-on-off {
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
+  margin-top: 2.5em;
+  background: radial-gradient(#282828, #161616 60%, grey);
+  font-size: 1.2em;
+  border-color: black;
+  box-shadow: 2px 2px 6px black;
+  transition: color 1s;
+  outline: none;
+}
+
+#button-on-off:active {
+  box-shadow: none;
+}
+
+.activateMachine#button-on-off {
+  color: orange;
+}
+
+#button-bank {
+  border-radius: 10%;
+  height: 2.3em;
+  width: 6em;
+  margin-top: 2em;
+  background-color: #161616;
+  color: black;
+  font-weight: bold;
+  border-color: black;
+  box-shadow: 1px 1px 4px black;
+  outline: none;
+  transition: color 2s;
+}
+
+#button-bank:active {
+  box-shadow: none;
+}
+
+.activateMachine#button-bank {
+  color: orange;
+}
+
+.activateMachine#button-bank:active {
+  color: yellow;
+}
+
+/* Control Panel - Volume slider */
+.slider {
+  -webkit-appearance: none;
+  outline: none;
+  margin-top: 3em;
+  margin-bottom: 2em;
+  width: 70%;
+  background-color: #161616;
+  height: 0.4em;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  outline: none;
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 50%;
+  background: radial-gradient(at 25% bottom, #282828, #161616 50%, grey);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  -moz-appearance: none;
+  outline: none;
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 50%;
+  background: radial-gradient(at 25% bottom, #282828, #161616 50%, grey);
+  cursor: pointer;
+}
+
+.activateMachine.slider::-webkit-slider-thumb:hover {
+  width: 1.8em;
+  height: 1.8em;
+  box-shadow: 1px 1px 4px black;
+}
+
+/* DrumMachineBody design */
+
+#machine-board {
+  background-color: #0e1111;
+  height: auto;
+  padding-bottom: 1em;
+}
+
+#display {
+  font-family: "DSEG14ClassicRegular";
+  height: 7em;
+  margin-top: 4em;
+  margin-bottom: 3em;
+  border: 1em solid #191919;
+  border-style: inset;
+  color: black;
+  background-color: black;
+  text-align: center;
+  padding-top: 1.3em;
+  transition: color 2s;
+}
+
+#display-text {
+  font-size: 2em;
+}
+
+.activateMachine#display {
+  background-color: #0c0c0c;
+  color: red;
+}
+
+.drum-pad {
+  outline: none !important;
+  font-weight: bold;
+  color: black;
+  background: radial-gradient(#192929, #161616 100%, grey);
+  border-color: #192929;
+  box-shadow: 0.1em 0.1em 1em black;
+  width: 6em;
+  height: 5em;
+  border-radius: 5%;
+  margin: 1em;
+  margin-bottom: 2em;
+  transition: color 2s;
+}
+
+.activateMachine.drum-pad {
+  color: orange;
+}
+.drum-padKeydown,
+.activateMachine.drum-pad:active {
+  box-shadow: 4px 4px 40px red;
+  border: ridge orange;
+  color: yellow;
+}
+
+.dupeclass {
+  border: solid green;
+}
+
+@media only screen and (max-width: 1650px) {
+  body {
+    font-size: 70%;
+  }
+}
+
+@media only screen and (max-width: 1230px) {
+  body {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 1060px) and (min-width: 768px) {
+  .padkey {
+    font-size: 60%;
+  }
+}
